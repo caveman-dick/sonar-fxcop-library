@@ -74,7 +74,7 @@ public class FxCopConfigurationTest {
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "", "", "", "", "fooFxCopReportPathKey").checkProperties(settings);
   }
-  
+
   @Test
   public void check_properties_with_multiple_assemblies() {
     Settings settings = mock(Settings.class);
@@ -83,8 +83,8 @@ public class FxCopConfigurationTest {
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
     when(settings.getString("fooFxCopCmdPathKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/FxCopCmd.exe").getAbsolutePath());
 
-    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "", "", "").checkProperties(settings);
-  }  
+    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "", "", "", "", "").checkProperties(settings);
+  }
 
   @Test
   public void check_properties_without_assembly_extension() {
